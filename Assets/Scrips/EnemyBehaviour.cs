@@ -3,10 +3,10 @@ using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
 
-    private float movementSpeed = 1 * Time.deltaTime;
+    public float movementSpeed = 1 ;
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.Translate(0, -movementSpeed, 0);
+        this.transform.Translate(0, -movementSpeed * Time.deltaTime, 0);
 	}
 }

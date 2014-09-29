@@ -3,8 +3,8 @@ using System.Collections;
 
 public class BulletController : MonoBehaviour {
 
-    private float destroyTime = 10;
-    private float speed = 25;
+    private float destroyTime = 1;
+    [SerializeField] private float speed = 30;
     public float damage = 10;
 
     void Start() {

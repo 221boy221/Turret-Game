@@ -47,16 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scrips\BulletController.cs" />
-     <Compile Include="Assets\Scrips\Enemy.cs" />
      <Compile Include="Assets\Scrips\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scrips\EnemyHealth.cs" />
      <Compile Include="Assets\Scrips\EnemySpawner.cs" />
      <Compile Include="Assets\Scrips\TurretBehaviour.cs" />
-     <Compile Include="Assets\Scrips\test scripts\DictionaryScript.cs" />
-     <Compile Include="Assets\Scrips\test scripts\DynamicTargetting.cs" />
-     <Compile Include="Assets\Scrips\test scripts\Enemy.cs" />
-     <Compile Include="Assets\Scrips\test scripts\Student.cs" />
-     <Compile Include="Assets\Scrips\test scripts\Student2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

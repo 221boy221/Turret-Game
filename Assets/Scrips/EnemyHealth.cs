@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
 
-    private float health = 100.0f;
+    [SerializeField] private float health = 100.0f;
 
     // When something comes in range
     private void OnTriggerEnter2D(Collider2D other) {

@@ -19,8 +19,8 @@ public class TurretBehaviour : MonoBehaviour {
 
         // Look at enemy
         if (enemyList.Count > 0) {
-            enemyList.Sort();
             this.transform.LookAt(enemyList[0].gameObject.transform);
+
             // Shoot
             if (Time.time > nextFireTime) {
                 ShootBullet();
@@ -36,7 +36,19 @@ public class TurretBehaviour : MonoBehaviour {
     // When enemy is in range
     void OnTriggerEnter2D(Collider2D target) {
         if (target.gameObject.tag == "Enemy") {
-            enemyList.Add(target.gameObject);
+
+            if (enemyList.Count > 0) {
+
+                if (enemyList[0].GetComponent<EnemyBehaviour>().movementSpeed < target.GetComponent<EnemyBehaviour>().movementSpeed) {
+                    enemyList.Add(enemyList[0]);
+                    enemyList[0] = target.gameObject;
+                } else {
+                    enemyList.Add(target.gameObject);
+                }
+
+            } else {
+                enemyList.Add(target.gameObject);
+            }
         }
     }
     // When enemy is out of range
